@@ -3,7 +3,8 @@ services:
     image: nginx:stable-alpine
     ports:
       - "80:80" 
-
+    volumes:
+      - ./static:/usr/share/nginx/html # portainer relative paths test
     deploy:
       mode: replicated
       replicas: 1
